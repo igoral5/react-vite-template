@@ -1,2 +1,2 @@
-# react-vite-template
-Шаблон React проекта со сборщиком мшеу
+# React + TypeScript + Vite
+Шаблон React проекта со сборщиком Vite
