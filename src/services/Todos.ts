@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import type { TodoModel } from "../models/TodoModel";
 
 export interface ITodos {
-  getList(): TodoModel[];
+  getList(): ReadonlyArray<TodoModel>;
   add(text: string): void;
   remove(id: string): void;
 }
@@ -10,7 +10,7 @@ export interface ITodos {
 export class Todos implements ITodos {
   constructor(protected todos: TodoModel[] = []) {}
 
-  getList(): TodoModel[] {
+  getList(): ReadonlyArray<TodoModel> {
     return this.todos;
   }
 
