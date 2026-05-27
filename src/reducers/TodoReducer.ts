@@ -24,18 +24,17 @@ const initialState: TodoState = {
 };
 
 const todosSlice = createSlice({
-    name: "todos",
-    initialState,
-    reducers: {
-        addTodo: (state, action: PayloadAction<string>) => {
-            state.todos.push({id: nanoid(6), text: action.payload})
-        },
-        delTodo: (state, action: PayloadAction<string>) => {
-            state.todos = state.todos.filter(val => val.id !== action.payload)
-        }
-    }
+  name: "todos",
+  initialState,
+  reducers: {
+    addTodo: (state, action: PayloadAction<string>) => {
+      state.todos.push({ id: nanoid(6), text: action.payload });
+    },
+    delTodo: (state, action: PayloadAction<string>) => {
+      state.todos = state.todos.filter((val) => val.id !== action.payload);
+    },
+  },
 });
 
-export const {addTodo, delTodo} = todosSlice.actions;
+export const { addTodo, delTodo } = todosSlice.actions;
 export const reducer = todosSlice.reducer;
-

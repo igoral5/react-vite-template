@@ -4,10 +4,8 @@ import style from "./TodoList.module.scss";
 import TodoItem from "../TodoItem/TodoItem";
 import { useSelector } from "../../hooks/TodoHooks";
 
-
 export default function TodoList(): ReactElement {
-
-  const todos = useSelector(store => store.todos);
+  const todos = useSelector((store) => store.todos);
 
   return (
     <ul className={style.list}>

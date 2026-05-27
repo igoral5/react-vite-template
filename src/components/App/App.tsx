@@ -5,11 +5,11 @@ import TodoList from "../TodoList/TodoList";
 
 export default function App(): ReactElement {
   return (
-		<div className={style.container}>
-			<div className={style.inner}>
-				<TodoInput />
-				<TodoList />
-			</div>
-		</div>
-	);
+    <div className={style.container}>
+      <div className={style.inner}>
+        <TodoInput />
+        <TodoList />
+      </div>
+    </div>
+  );
 }
