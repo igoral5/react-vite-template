@@ -2,7 +2,7 @@ import type { TodoModel } from "../../models/TodoModel";
 import type { ReactElement } from "react";
 import style from "./TodoItem.module.scss";
 import { useDispatch } from "../../hooks/TodoHooks";
-import { delTodo } from "../../actions/TodoActions";
+import { delTodo } from "../../reducers/TodoReducer";
 
 interface TodoItemProps {
     todo: TodoModel;

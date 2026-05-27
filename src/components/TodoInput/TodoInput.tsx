@@ -6,7 +6,7 @@ import {
 } from "react";
 import style from "./TodoInput.module.scss";
 import { useDispatch } from "../../hooks/TodoHooks";
-import { addTodo } from "../../actions/TodoActions";
+import { addTodo } from "../../reducers/TodoReducer";
 
 export default function TodoInput(): ReactElement {
   const [todoText, setTodoText] = useState<string>("");
