@@ -2,7 +2,7 @@ import type { TodoModel } from "../../models/TodoModel";
 import type { ReactElement } from "react";
 import style from "./TodoItem.module.scss";
 import { useDispatch } from "../../hooks/TodoHooks";
-import { DEL_TODO } from "../../actions/TodoActions";
+import { delTodo } from "../../actions/TodoActions";
 
 interface TodoItemProps {
     todo: TodoModel;
@@ -14,10 +14,7 @@ export default function TodoItem({ todo }: TodoItemProps): ReactElement {
    const dispatch = useDispatch();
 
     const onDeleteTodo = () => {
-        dispatch({
-            type: DEL_TODO,
-            id,
-        })
+        dispatch(delTodo(id))
     }
 
     return (

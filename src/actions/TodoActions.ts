@@ -1,15 +1,6 @@
-export const ADD_TODO = "ADD_TODO";
-export const DEL_TODO = "DEL_TODO";
+import { createAction } from "@reduxjs/toolkit";
 
-type ActionAddTodo = {
-    type: typeof ADD_TODO;
-    text: string;
-}
+export const addTodo = createAction<string>("ADD_TODO");
+export const delTodo = createAction<string>("DEL_TODO");
 
-type ActionDelTodo = {
-    type: typeof DEL_TODO;
-    id: string;
-}
-
-export type ActionsTodo = ActionAddTodo | ActionDelTodo;
 

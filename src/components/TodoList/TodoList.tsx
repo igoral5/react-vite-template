@@ -7,7 +7,7 @@ import { useSelector } from "../../hooks/TodoHooks";
 
 export default function TodoList(): ReactElement {
 
-  const todos = useSelector(store => store);
+  const todos = useSelector(store => store.todos);
 
   return (
     <ul className={style.list}>

@@ -6,7 +6,7 @@ import {
 } from "react";
 import style from "./TodoInput.module.scss";
 import { useDispatch } from "../../hooks/TodoHooks";
-import { ADD_TODO } from "../../actions/TodoActions";
+import { addTodo } from "../../actions/TodoActions";
 
 export default function TodoInput(): ReactElement {
   const [todoText, setTodoText] = useState<string>("");
@@ -21,10 +21,7 @@ export default function TodoInput(): ReactElement {
     e.preventDefault();
     if (todoText !== "") {
       setTodoText("");
-      dispatch({
-        type: ADD_TODO,
-        text: todoText,
-      });
+      dispatch(addTodo(todoText));
     }
   };
   return (
