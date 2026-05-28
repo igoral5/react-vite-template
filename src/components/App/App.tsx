@@ -6,7 +6,6 @@ import { startTicker, stopTiker } from "../../actions/tikerActions";
 import type { ApiDispath } from "../../store/store";
 
 export default function App(): ReactElement {
-
   const [working, setWorking] = useState(false);
 
   const ticker = useSelector(getTicker);
@@ -16,20 +15,18 @@ export default function App(): ReactElement {
   const onClick = () => {
     if (working) {
       setWorking(false);
-      dispatch(stopTiker())
+      dispatch(stopTiker());
     } else {
       setWorking(true);
-      dispatch(startTicker())
+      dispatch(startTicker());
     }
   };
-
-  
 
   return (
     <div className={style.container}>
       Счётчик: {ticker}
       <div className={style.buttonContainer}>
-        <button onClick={onClick}>{ !working ? "Старт" : "Стоп"}</button>
+        <button onClick={onClick}>{!working ? "Старт" : "Стоп"}</button>
       </div>
     </div>
   );
