@@ -13,7 +13,7 @@ export default function LikeButton({ track }: LikeButtonProps): ReactElement {
   const dispatch = useDispatch<AppDispatch>();
 
   const onClick = () => {
-    dispatch(toggleLike(track));
+    dispatch(toggleLike(track.id));
   };
 
   return (

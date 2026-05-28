@@ -24,13 +24,16 @@ const trackSlice = createSlice({
   name: "tracks",
   initialState,
   reducers: {
-    toggleLike(state, action: PayloadAction<TrackModel>) {
-      const { id } = action.payload;
-
-      const trackToLike = state.tracks.find((track) => track.id === id);
-      if (trackToLike) {
-        trackToLike.isLiked = !trackToLike.isLiked;
-      }
+    toggleLike(state, action: PayloadAction<number>) {
+      state.tracks = state.tracks.map((track) => {
+        if (track.id === action.payload) {
+          return {
+            ...track,
+            isLiked: !track.isLiked,
+          };
+        }
+        return track;
+      });
     },
   },
   selectors: {
