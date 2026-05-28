@@ -9,4 +9,4 @@ export const store = configureStore({
   },
 });
 
-export type ApiDispath = typeof store.dispatch;
+export type AppDispath = typeof store.dispatch;
