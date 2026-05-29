@@ -1,0 +1,56 @@
+.info > span {
+  display: block;
+  font-weight: 500;
+  font-family: 'IBM Plex Sans', serif;
+}
+
+.active {
+  color: var(--color-text);
+}
+
+.info > span:last-child {
+  color: rgb(250 250 250 / 60%);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: rgb(250 250 250 / 60%);
+}
+
+.chat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: var(--container-padding);
+  color: white;
+  text-decoration: none;
+}
+
+.lastMessage {
+  max-width: 175px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.lastMessage > span:last-child {
+  color: rgb(250 250 250 / 60%);
+}
+
+.chatContent {
+  width: 100%;
+}
+
+.activeChat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: var(--container-padding);
+  color: white;
+  text-decoration: none;
+  background-color: #292929;
+}

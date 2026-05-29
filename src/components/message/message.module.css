@@ -1,0 +1,38 @@
+.messageContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  color: var(--color-text);
+}
+
+.ownMessageContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  color: var(--color-text);
+}
+
+.message {
+  flex-shrink: 1;
+  min-width: 100px;
+  max-width: 70%;
+  padding: 12px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+}
+
+.ownMessage {
+  flex-shrink: 1;
+  max-width: 70%;
+  padding: 12px;
+  background-color: #7247eb;
+  border-radius: 12px;
+}
+
+.messageInfo {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  width: 100%;
+  padding-top: 4px;
+}
