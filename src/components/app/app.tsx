@@ -1,18 +1,30 @@
 import { ChatPage, ListPage, LoginPage, NotFoundPage } from "@/pages";
+import { loader as chatLoader } from "@/pages/list/list";
 import type { ReactElement } from "react";
-import { Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/list",
+    element: <ListPage />,
+    children: [
+      {
+        path: ":chatId",
+        element: <ChatPage />,
+      },
+    ],
+    loader: chatLoader,
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
+  },
+]);
 
 export default function App(): ReactElement {
-  return (<Routes>
-    <Route path="/login" element={<LoginPage />} />
-    <Route path="/list" element={<ListPage />}>
-      <Route path="1" element={<ChatPage /> } />
-      <Route path="2" element={<ChatPage /> } />
-      <Route path="3" element={<ChatPage /> } />
-      <Route path="4" element={<ChatPage /> } />
-      <Route path="5" element={<ChatPage /> } />
-    </Route>
-    <Route path="*" element={<NotFoundPage />} />
-  </Routes>);
+  return <RouterProvider router={router} />;
 }
