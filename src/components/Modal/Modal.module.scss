@@ -1,0 +1,53 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Поверх всего контента */
+}
+
+/* Контейнер модального окна */
+.modal-content {
+  position: relative; /* Родоначальник координат для абсолютного позиционирования крестика */
+  background-color: #ffffff;
+  padding: 32px 24px 24px 24px; /* Верхний паддинг больше, чтобы текст не налезал на крестик */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px; /* Ограничение по ширине */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+/* Кнопка-крестик */
+.modal-close-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px; /* Размер крестика из символа &times; */
+  line-height: 1;
+  color: #333333;
+  cursor: pointer;
+  padding: 4px;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Эффекты при наведении на крестик */
+.modal-close-button:hover {
+  color: #ff4d4f; /* Становится красноватым */
+  transform: scale(1.2); /* Слегка увеличивается */
+}
+
+/* Внутренний контейнер для контента */
+.modal-body {
+  font-family: sans-serif;
+  color: #222222;
+}

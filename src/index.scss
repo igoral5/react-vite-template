@@ -1,39 +1,57 @@
-*,
-*::after,
-*::before {
+@use "./fonts/fonts";
+
+* {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li {
   margin: 0;
   padding: 0;
 }
 
-a {
-  color: inherit;
+body {
+  --color-background: #141414;
+  --color-shadow: rgb(255 255 255 / 5%);
+  --color-hover: #1c1c21;
+  --color-primary: #7247eb;
+  --color-text: #fafafa;
+  --color-title: #ebcf47;
+  --color-conrtol: #26262c;
+  --container-padding: 20px;
+  --shadow: inset 0px -1px 0px var(--color-shadow);
+  font-family: "IBM Plex Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 
-button,
-input {
-  color: currentColor;
-  font-family: inherit;
-  font-size: inherit;
-}
-
-ul,
-ol {
+ul {
   list-style: none;
+}
+
+
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 36px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 48px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 32px;
+  font-style: normal;
+  line-height: 32px;
+}
+
+p {
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
 }
