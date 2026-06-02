@@ -3,8 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { galleryData } from "../../data/Gallery";
 import style from "./Card.module.scss";
 import Modal from "../Modal/Modal";
+import NotFoundPage from "../../pages/NotFound/NotFound";
 
-export default function Card(): ReactElement | null {
+export default function Card(): ReactElement {
   const { imgIndex } = useParams();
 
   const navigator = useNavigate()
@@ -20,7 +21,7 @@ export default function Card(): ReactElement | null {
     index < 0 ||
     index > galleryData.images.length
   ) {
-    return null;
+    return <NotFoundPage />;
   }
   const image = galleryData.images[index];
 
