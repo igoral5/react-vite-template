@@ -15,7 +15,7 @@ interface ModalProps {
 export default function Modal({
   onClose,
   children,
-}: ModalProps): ReactElement | null {
+}: ModalProps): ReactElement {
   const modalRoot = document.getElementById("modal-root");
 
   const handleOverlayClick = (event: MouseEvent<HTMLElement>) => {
