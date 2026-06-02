@@ -29,5 +29,15 @@ export const galleryData: GalleryData = {
       image: "https://picsum.photos/seed/17/300/200",
       description: "Описание пятой картинки",
     },
+    {
+      id: "6",
+      image: "https://picsum.photos/seed/18/300/200",
+      description: "Описание шестой картинки",
+    },
+    {
+      id: "7",
+      image: "https://picsum.photos/seed/21/300/200",
+      description: "Описание седьмой картинки",
+    },
   ],
 };
