@@ -8,22 +8,23 @@ import NotFoundPage from "../../pages/NotFound/NotFound";
 export default function Card(): ReactElement {
   const { imgIndex } = useParams();
 
-  const navigator = useNavigate()
-
-  const onClose = () => {
-    navigator("/");
-  };
-
   const index = parseInt(imgIndex!);
 
   if (
     Number.isNaN(index) ||
     index < 0 ||
-    index > galleryData.images.length
+    index > galleryData.images.length - 1
   ) {
     return <NotFoundPage />;
   }
+
   const image = galleryData.images[index];
+
+  const navigator = useNavigate();
+
+  const onClose = () => {
+    navigator("/");
+  };
 
   return (
     <Modal onClose={onClose}>
