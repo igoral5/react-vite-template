@@ -34,6 +34,4 @@ const initialState: TodoModel[] = [
   },
 ];
 
-const todoStore = new TodoStore(initialState);
-
-export default todoStore;
+export const todoStore = new TodoStore(initialState);

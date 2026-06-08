@@ -1,8 +1,8 @@
 import { observer } from "mobx-react-lite";
 import type { TodoModel } from "../../models/TodoModel";
 import type { ReactElement } from "react";
-import todoStore from "../../store/TodoStore";
 import style from "./TodoItem.module.scss";
+import { todoStore } from "../../store/TodoStore";
 
 interface TodoItemProps {
   todo: TodoModel;

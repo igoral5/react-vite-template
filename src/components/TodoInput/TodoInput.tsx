@@ -5,8 +5,8 @@ import {
   type ReactElement,
   type SyntheticEvent,
 } from "react";
-import todoStore from "../../store/TodoStore";
 import style from "./TodoInput.module.scss";
+import { todoStore } from "../../store/TodoStore";
 
 function TodoInput(): ReactElement {
   const [todoText, setTodoText] = useState<string>("");
