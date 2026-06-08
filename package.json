@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "mobx": "^6.16.0",
+    "mobx-react-lite": "^4.1.1",
+    "nanoid": "^5.1.11",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
