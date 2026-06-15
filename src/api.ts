@@ -4,7 +4,7 @@ import type { TPost } from "./types";
 const posts: TPost[] = [
   { id: nanoid(6), text: "А у нас в квартире газ" },
   { id: nanoid(6), text: "А у нас вопровод, вот" },
-  { id: nanoid(6), text: "А у нас в квартире кошка" },
+  { id: nanoid(6), text: "А у нас в квартире кошка, родила вчера котят" },
 ];
 
 export const loadPosts = (): Promise<TPost[]> =>
